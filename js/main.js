@@ -149,9 +149,11 @@ const getWeather = () => {
     .then((response) => response.json())
     .then((res) => {
       const adcode = res.adcode;
-      $("#city_text").html(res.city);
+      // $("#city_text").html(res.city);
+      $("#city_text").html('杭州市');
       fetch(
-        `https://restapi.amap.com/v3/weather/weatherInfo?key=${mainKey}&city=${adcode}`
+        // `https://restapi.amap.com/v3/weather/weatherInfo?key=${mainKey}&city=${adcode}`
+        `https://restapi.amap.com/v3/weather/weatherInfo?key=${mainKey}&city=330100`
       )
         .then((response) => response.json())
         .then((res) => {
@@ -359,7 +361,7 @@ $("#switchmore").on("click", function () {
   } else {
     $("#container").attr("class", "container");
     $("#change").html("Hello&nbsp;World&nbsp;!");
-    $("#change1").html("一个不正经的Up");
+    $("#change1").html("一个不正经的前端开发工程师");
   }
 });
 
@@ -408,7 +410,7 @@ window.addEventListener("load", function () {
       //移动端隐藏更多页面
       $("#container").attr("class", "container");
       $("#change").html("Hello&nbsp;World&nbsp;!");
-      $("#change1").html("一个不正经的Up");
+      $("#change1").html("一个不正经的前端开发工程师");
 
       //移动端隐藏弹窗页面
       $("#box").css("display", "none");
@@ -463,22 +465,22 @@ color: rgb(244,167,89);
 let styleContent = `
 color: rgb(30,152,255);
 `;
-let title1 = "無名の主页";
+let title1 = "Recluseの主页";
 let title2 = `
- _____ __  __  _______     ____     __
-|_   _|  \\/  |/ ____\\ \\   / /\\ \\   / /
-  | | | \\  / | (___  \\ \\_/ /  \\ \\_/ / 
-  | | | |\\/| |\\___ \\  \\   /    \\   /  
- _| |_| |  | |____) |  | |      | |   
-|_____|_|  |_|_____/   |_|      |_|                                                     
+ ______  _______  _____     __       __     __   ______  _______
+|   _   |   ____|/  __  \\ |  |      |  |   |  | /  ____||   ____|
+|  |_|  |  |____|  |  \\__ |  |      |  |   |  |  |___   |  |____
+|      /|   ____|  |   __ |  |      |  |   |  | \\____  \\|   ____|
+|  |\\  \\|  |____|  |__/  /|  |_____ |  \\__ /  | _____)  |  |____
+|__| \\__|_______ \\______/ |________| \\_______/ |_______/|_______|                                              
 `;
 let content = `
-版 本 号：3.4
-更新日期：2022-07-24
+版 本 号：0.1
+更新日期：2024-02-19
 
-主页:  https://www.imsyy.top
-Github:  https://github.com/imsyy/home
 `;
+// 主页:  https://www.imsyy.top
+// Github:  https://github.com/imsyy/home
 console.log(
   `%c${title1} %c${title2}
 %c${content}`,
